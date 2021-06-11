@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:image" content="http://nariweb.dothome.co.kr/img/icon/glasses_icon">
+    <title>DK</title>
+    <script defer src="js/jguery-1.12.4.js"></script>
+    <script defer src="js/common.js"></script>
+    <script defer src="js/collection.js"></script>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/collection.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;500;600;700;800;900&family=Khula:wght@300;400;600;700;800&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet">
+</head>
+<body>
+    <div class="wrap">
+        <div class="top_btn">
+            <canvas class="top_canvas" width="65px" height="65px">
+            </canvas>
+            <span class="material-icons-outlined scr_arrow">
+                north
+            </span>
+        </div>
+        <header>
+            <div class="header_fixed">
+                <div class="header_wrap">
+                    <div class="h_logo"><a href="index.html">DK EYEWEAR GROUP</a></div>
+                    <div class="h_col_search">
+                        <img src="img/icon/search_icon_b.png" alt="search" class="sh_b">
+                    </div>
+                    <div class="h_menu">
+                        <div class="menu_btn">
+                            <div class="menu_btn_line"></div>
+                            <div class="menu_btn_line"></div>
+                            <div class="menu_btn_line"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main_menu_container">
+                <div class="main_menu_header">
+                    <div class="menu_logo"><a href="index.html">DKNY EYEWEAR GROUP</a></div>
+                    <div class="menu_ch_btn">
+                        <div class="menu_ch_btn_line" id="menu_ch_line_top"></div>
+                        <div class="menu_ch_btn_line" id="menu_ch_line_mid"></div>
+                        <div class="menu_ch_btn_line" id="menu_ch_line_bot"></div>
+                    </div>
+                </div>
+                <div class="main_menu_bg">
+                    <div class="main_m_bg main_m_bg1"></div>
+                    <div class="main_m_bg main_m_bg2"></div>
+                    <div class="main_m_bg main_m_bg3"></div>
+                    <div class="main_m_bg main_m_bg4"></div>
+                </div>
+                <div class="menu_line"></div>
+                <div class="menu_line2"></div>
+                <div class="menu_outer">
+                    <div class="menu_item menu_about">
+                        <div class="menu_tit"><a href="collection.html">About</a></div>
+                        <ul class="menu_ul">
+                            <li class="menu_li"><a href="item.html?cate_no=0&item_no=19">Group</a></li>
+                            <li class="menu_li"><a href="item.html?cate_no=0&item_no=1">Subsidiary companies</a></li>
+                            <li class="menu_li"><a href="item.html?cate_no=1&item_no=10">News</a></li>
+                            <li class="menu_li"><a href="item.html?cate_no=1&item_no=8">Media</a></li>
+                            <li class="menu_li"><a href="item.html?cate_no=1&item_no=14">Recruit</a></li>
+                        </ul>
+                    </div>
+                    <div class="menu_item menu_collection">
+                        <div class="menu_tit"><a href="collection.html">Collection</a></div>
+                        <ul class="menu_ul">
+                            <li class="menu_li mc_count mc_count1">
+                                <a href="collection.html">DK</a>
+                                <div class="menu_col_item">
+                                    <div class="menu_col_move m_col1_m1"> 
+                                        <!-- 14개 -->
+                                        <div class="menu_img_box">
+                                            <img src="img/menu/dk_sub_bally.png" alt="menu_brand" class="menu_col_m_logo">
+                                        </div>
+                                        <div class="menu_img_box">
+                                            <img src="img/menu/dk_sub_balmain.png" alt="menu_brand" class="menu_col_m_logo">
+                                        </div>
+                                        <div class="menu_img_box">
+                                            <img src="img/menu/dk_sub_bolon.png" alt="menu_brand" class="menu_col_m_logo">
+                                        </div>
+                                        <div class="menu_img_box">
+                                            <img src="img/menu/dk_sub_dkny.png" alt="menu_brand" class="menu_col_m_logo">
+                                        </div>
+                                        <div class="menu_img_box">
+                                            <img src="img/menu/dk_sub_endymion.png" alt="menu_brand" class="menu_col_m_logo">
+                                        </div>
+                                        <div class="menu_img_box">
+                                            <img src="img/menu/dk_sub_kio.png" alt="menu_brand" class="menu_col_m_logo">
+                                        </div>
+                                        <div class="menu_img_box">
+                                            <img src="img/menu/dk_sub_mila.png" alt="menu_brand" class="menu_col_m_logo">
+                                        </div>
+                                        <div class="menu_img_box">
+                                            <img src="img/menu/dk_sub_molsion.png" alt="menu_brand" class="menu_col_m_logo">
+                                        </div>
+                                        <div class="menu_img_box">
+                                            <img src="img/menu/dk_sub_new1.png" alt="menu_brand" class="menu_col_m_logo">
+                                        </div>
+                                        <div class="menu_img_box">
+                                            <img src="img/menu/dk_sub_new2.png" alt="menu_brand" class="menu_col_m_logo">
+                                        </div>
+                                        <div class="menu_img_box">
+                                            <img src="img/menu/dk_sub_o_x.png" alt="menu_brand" class="menu_col_m_logo">
+                                        </div>
+                                        <div class="menu_img_box">
+                                            <img src="img/menu/dk_sub_sonia.png" alt="menu_brand" class="menu_col_m_logo">
+                                        </div>
+                                        <div class="menu_img_box">
+                                            <img src="img/menu/dk_sub_st.png" alt="menu_brand" class="menu_col_m_logo">
+                                        </div>
+                                        <div class="menu_img_box">
+                                            <img src="img/menu/dk_sub_vivienne.png" alt="menu_brand" class="menu_col_m_logo">
+                                        </div>     
+                                    </div>
+                                    <div class="menu_col_move m_col1_m2"> 
+                                        <!-- 14개 -->
+                                        <div class="menu_img_box">
+                                            <img src="img/menu/dk_sub_bally.png" alt="menu_brand" class="menu_col_m_logo">
+                                        </div>
+                                        <div class="menu_img_box">
+                                            <img src="img/menu/dk_sub_balmain.png" alt="menu_brand" class="menu_col_m_logo">
+                                        </div>
+                                        <div class="menu_img_box">
+                                            <img src="img/menu/dk_sub_bolon.png" alt="menu_brand" class="menu_col_m_logo">
+                                        </div>
+                                        <div class="menu_img_box">
+                                            <img src="img/menu/dk_sub_dkny.png" alt="menu_brand" class="menu_col_m_logo">
+                                        </div>
+                                        <div class="menu_img_box">
+                                            <img src="img/menu/dk_sub_endymion.png" alt="menu_brand" class="menu_col_m_logo">
+                                        </div>
+                                        <div class="menu_img_box">
+                                            <img src="img/menu/dk_sub_kio.png" alt="menu_brand" class="menu_col_m_logo">
+                                        </div>
+                                        <div class="menu_img_box">
+                                            <img src="img/menu/dk_sub_mila.png" alt="menu_brand" class="menu_col_m_logo">
+                                        </div>
+                                        <div class="menu_img_box">
+                                            <img src="img/menu/dk_sub_molsion.png" alt="menu_brand" class="menu_col_m_logo">
+                                        </div>
+                                        <div class="menu_img_box">
+                                            <img src="img/menu/dk_sub_new1.png" alt="menu_brand" class="menu_col_m_logo">
+                                        </div>
+                                        <div class="menu_img_box">
+                                            <img src="img/menu/dk_sub_new2.png" alt="menu_brand" class="menu_col_m_logo">
+                                        </div>
+                                        <div class="menu_img_box">
+                                            <img src="img/menu/dk_sub_o_x.png" alt="menu_brand" class="menu_col_m_logo">
+                                        </div>
+                                        <div class="menu_img_box">
+                                            <img src="img/menu/dk_sub_sonia.png" alt="menu_brand" class="menu_col_m_logo">
+                                        </div>
+                                        <div class="menu_img_box">
+                                            <img src="img/menu/dk_sub_st.png" alt="menu_brand" class="menu_col_m_logo">
+                                        </div>
+                                        <div class="menu_img_box">   
+                                            <img src="img/menu/dk_sub_vivienne.png" alt="menu_brand" class="menu_col_m_logo">
+                                        </div>     
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="menu_li mc_count mc_count2">
+                                <a href="collection.html">K-ASTER</a>
+                                <div class="menu_col_item">
+                                    <div class="menu_col_move m_col2_m1">
+                                        <!-- 8개 -->
+                                        <div class="menu_img_box">
+                                            <img src="img/menu/k_sub_alexander.png" alt="menu_brand" class="menu_col_m_logo">
+                                        </div>
+                                        <div class="menu_img_box">
+                                            <img src="img/menu/k_sub_balenciaga.png" alt="menu_brand" class="menu_col_m_logo">
+                                        </div>
+                                        <div class="menu_img_box">
+                                            <img src="img/menu/k_sub_bottega.png" alt="menu_brand" class="menu_col_m_logo">
+                                        </div>
+                                        <div class="menu_img_box">
+                                            <img src="img/menu/k_sub_cartier.png" alt="menu_brand" class="menu_col_m_logo">
+                                        </div>
+                                        <div class="menu_img_box">
+                                            <img src="img/menu/k_sub_gucci.png" alt="menu_brand" class="menu_col_m_logo">
+                                        </div>
+                                        <div class="menu_img_box">
+                                            <img src="img/menu/k_sub_mcq.png" alt="menu_brand" class="menu_col_m_logo">
+                                        </div>
+                                        <div class="menu_img_box">
+                                            <img src="img/menu/k_sub_saint.png" alt="menu_brand" class="menu_col_m_logo">
+                                        </div>
+                                        <div class="menu_img_box">
+                                            <img src="img/menu/knd-sub-_57.png" alt="menu_brand" class="menu_col_m_logo">
+                                        </div>
+                                    </div>
+                                    <div class="menu_col_move m_col2_m2">
+                                        <!-- 8개 -->
+                                        <div class="menu_img_box">
+                                            <img src="img/menu/k_sub_alexander.png" alt="menu_brand" class="menu_col_m_logo">
+                                        </div>
+                                        <div class="menu_img_box">
+                                            <img src="img/menu/k_sub_balenciaga.png" alt="menu_brand" class="menu_col_m_logo">
+                                        </div>
+                                        <div class="menu_img_box">
+                                            <img src="img/menu/k_sub_bottega.png" alt="menu_brand" class="menu_col_m_logo">
+                                        </div>
+                                        <div class="menu_img_box">
+                                            <img src="img/menu/k_sub_cartier.png" alt="menu_brand" class="menu_col_m_logo">
+                                        </div>
+                                        <div class="menu_img_box">
+                                            <img src="img/menu/k_sub_gucci.png" alt="menu_brand" class="menu_col_m_logo">
+                                        </div>
+                                        <div class="menu_img_box">
+                                            <img src="img/menu/k_sub_mcq.png" alt="menu_brand" class="menu_col_m_logo">
+                                        </div>
+                                        <div class="menu_img_box">
+                                            <img src="img/menu/k_sub_saint.png" alt="menu_brand" class="menu_col_m_logo">
+                                        </div>
+                                        <div class="menu_img_box">
+                                            <img src="img/menu/knd-sub-_57.png" alt="menu_brand" class="menu_col_m_logo">
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="menu_li mc_count mc_count3">
+                                <a href="collection.html">DNT</a>
+                                <div class="menu_col_item">
+                                    <div class="menu_col_move m_col3_m1">
+                                        <!-- 5개 -->
+                                        <div class="menu_img_box">
+                                            <img src="img/menu/dnt_sub_celine.png" alt="menu_brand" class="menu_col_m_logo">
+                                        </div>
+                                        <div class="menu_img_box">
+                                            <img src="img/menu/dnt_sub_dior.png" alt="menu_brand" class="menu_col_m_logo">
+                                        </div>
+                                        <div class="menu_img_box">
+                                            <img src="img/menu/dnt_sub_kenzo.png" alt="menu_brand" class="menu_col_m_logo">
+                                        </div>
+                                        <div class="menu_img_box">
+                                            <img src="img/menu/dnt_sub_loewe.png" alt="menu_brand" class="menu_col_m_logo">
+                                        </div>
+                                        <div class="menu_img_box">
+                                            <img src="img/menu/dnt_sub_stella.png" alt="menu_brand" class="menu_col_m_logo">
+                                        </div>
+                                    </div>
+                                    <div class="menu_col_move m_col3_m2">
+                                        <!-- 5개 -->
+                                        <div class="menu_img_box">
+                                            <img src="img/menu/dnt_sub_celine.png" alt="menu_brand" class="menu_col_m_logo">
+                                        </div>
+                                        <div class="menu_img_box">
+                                            <img src="img/menu/dnt_sub_dior.png" alt="menu_brand" class="menu_col_m_logo">
+                                        </div>
+                                        <div class="menu_img_box">
+                                            <img src="img/menu/dnt_sub_kenzo.png" alt="menu_brand" class="menu_col_m_logo">
+                                        </div>
+                                        <div class="menu_img_box">
+                                            <img src="img/menu/dnt_sub_loewe.png" alt="menu_brand" class="menu_col_m_logo">
+                                        </div>
+                                        <div class="menu_img_box">
+                                            <img src="img/menu/dnt_sub_stella.png" alt="menu_brand" class="menu_col_m_logo">
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="menu_li mc_count mc_count4">
+                                <a href="collection.html">TEK</a>
+                                <div class="menu_col_item">
+                                    <div class="menu_col_move m_col4_m1">
+                                        <!-- 5개 -->
+                                        <div class="menu_img_box">
+                                            <img src="img/menu/tek_sub_annasui.png" alt="menu_brand" class="menu_col_m_logo">
+                                        </div>
+                                        <div class="menu_img_box">
+                                            <img src="img/menu/tek_sub_escada.png" alt="menu_brand" class="menu_col_m_logo">
+                                        </div>
+                                        <div class="menu_img_box">
+                                            <img src="img/menu/tek_sub_mulberry.png" alt="menu_brand" class="menu_col_m_logo">
+                                        </div>
+                                        <div class="menu_img_box">
+                                            <img src="img/menu/tek_sub_paul.png" alt="menu_brand" class="menu_col_m_logo">
+                                        </div>
+                                        <div class="menu_img_box">
+                                            <img src="img/menu/tek_sub_police.png" alt="menu_brand" class="menu_col_m_logo">
+                                        </div>
+                                    </div>
+                                    <div class="menu_col_move m_col4_m2">
+                                        <!-- 5개 -->
+                                        <div class="menu_img_box">
+                                            <img src="img/menu/tek_sub_annasui.png" alt="menu_brand" class="menu_col_m_logo">
+                                        </div>
+                                        <div class="menu_img_box">
+                                            <img src="img/menu/tek_sub_escada.png" alt="menu_brand" class="menu_col_m_logo">
+                                        </div>
+                                        <div class="menu_img_box">
+                                            <img src="img/menu/tek_sub_mulberry.png" alt="menu_brand" class="menu_col_m_logo">
+                                        </div>
+                                        <div class="menu_img_box">
+                                            <img src="img/menu/tek_sub_paul.png" alt="menu_brand" class="menu_col_m_logo">
+                                        </div>
+                                        <div class="menu_img_box">
+                                            <img src="img/menu/tek_sub_police.png" alt="menu_brand" class="menu_col_m_logo">
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="menu_li li_link">
+                                <a href="collection.html">KIVULI<span><i class="fas fa-external-link-alt"></i></span></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="menu_item menu_guarantee">
+                        <div class="menu_tit"><a href="item.html?cate_no=0&item_no=16">Guarantee</a></div>
+                    </div>
+                    <div class="menu_item menu_contact">
+                        <div class="menu_tit"><a href="item.html?cate_no=0&item_no=15">Contact</a></div>
+                    </div>
+                    
+                </div>
+                <div class="menu_footer">
+                    <div class="menu_fot_sns">
+                        <i class="fab fa-facebook-f"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-blogger-b"></i>
+                    </div>
+                    <span>94, Toegye-ro 8-gil, Jung-gu, Seoul</span>
+                    <span class="menu_footer_tel">Tel: 02-717-3990</span>
+                    <p>© 2016 DK Corp. All rights reserved</p>
+                </div>
+            </div>
+            
+        </header>
+
+        <main>
+            <div class="colloction_tit">
+                <div class="col_container">
+                    <div class="col_letter col_letter_ac">C</div>
+                    <div class="col_letter col_letter_ac">o</div>
+                    <div class="col_letter col_letter_ac">l</div>
+                    <div class="col_letter col_letter_ac">l</div>
+                    <div class="col_letter col_letter_ac">e</div>
+                    <div class="col_letter col_letter_ac">c</div>
+                    <div class="col_letter col_letter_ac">t</div>
+                    <div class="col_letter col_letter_ac">i</div>
+                    <div class="col_letter col_letter_ac">o</div>
+                    <div class="col_letter col_letter_ac">n</div>
+                </div>
+            </div>
+            <div class="main_sec">
+                <div class="collection_item_sec">
+                    <div class="col_opc_sec">
+                        <div class="col_category">
+                            <div class="col_opt company_cate_opt">
+                                <div class="col_box company_box">
+                                    <p>Company</p>
+                                    <span><i class="fas fa-caret-down opt_arrow"></i></span>
+                                </div>
+                                <div class="col_content company_content">
+                                    <ul>
+                                        <li class="col_opt_li company_li">
+                                            <div class="opt_radio">
+                                                <div class="radio_border"></div>
+                                                <div class="radio_big"></div>
+                                                <div class="radio_small"></div>
+                                                <input type="radio" name="company_rd" id="company_rd1">
+                                            </div>
+                                            <label for="company_rd1"><span>DK</span></label>
+                                        </li>
+                                        <li class="col_opt_li company_li">
+                                            <div class="opt_radio">
+                                                <div class="radio_border"></div>
+                                                <div class="radio_big"></div>
+                                                <div class="radio_small"></div>
+                                                <input type="radio" name="company_rd" id="company_rd2">
+                                            </div>
+                                            <label for="company_rd2"><span>K-ASTER</span></label>
+                                        </li>
+                                        <li class="col_opt_li company_li">
+                                            <div class="opt_radio">
+                                                <div class="radio_border"></div>
+                                                <div class="radio_big"></div>
+                                                <div class="radio_small"></div>
+                                                <input type="radio" name="company_rd" id="company_rd3">
+                                            </div>
+                                            <label for="company_rd3"><span>DNT</span></label>
+                                        </li>
+                                        <li class="col_opt_li company_li">
+                                            <div class="opt_radio">
+                                                <div class="radio_border"></div>
+                                                <div class="radio_big"></div>
+                                                <div class="radio_small"></div>
+                                                <input type="radio" name="company_rd" id="company_rd4">
+                                            </div>
+                                            <label for="company_rd4"><span>TEK</span></label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col_opt brand_cate_opt">
+                                <div class="col_box brand_box">
+                                    <p>Brand Category</p>
+                                    <span><i class="fas fa-caret-down opt_arrow"></i></span>
+                                </div>
+                                <div class="col_content brand_content">
+                                    <ul>
+                                        <li class="col_opt_li brand_li">
+                                            <div class="opt_radio">
+                                                <div class="radio_border"></div>
+                                                <div class="radio_big"></div>
+                                                <div class="radio_small"></div>
+                                                <input type="radio" name="brand_rd" id="brand_rd1">
+                                            </div>
+                                            <label for="brand_rd1"><span>ALL</span></label>
+                                        </li>
+                                        <li class="col_opt_li brand_li">
+                                            <div class="opt_radio">
+                                                <div class="radio_border"></div>
+                                                <div class="radio_big"></div>
+                                                <div class="radio_small"></div>
+                                                <input type="radio" name="brand_rd" id="brand_rd2">
+                                            </div>
+                                            <label for="brand_rd2"><span>S.T.DUPONT</span></label>
+                                        </li>
+                                        <li class="col_opt_li brand_li">
+                                            <div class="opt_radio">
+                                                <div class="radio_border"></div>
+                                                <div class="radio_big"></div>
+                                                <div class="radio_small"></div>
+                                                <input type="radio" name="brand_rd" id="brand_rd3">
+                                            </div>
+                                            <label for="brand_rd3"><span>VIVIENNE<br>WESTWOOD</span></label>
+                                        </li>
+                                        <li class="col_opt_li brand_li">
+                                            <div class="opt_radio">
+                                                <div class="radio_border"></div>
+                                                <div class="radio_big"></div>
+                                                <div class="radio_small"></div>
+                                                <input type="radio" name="brand_rd" id="brand_rd4">
+                                            </div>
+                                            <label for="brand_rd4"><span>CHLOE</span></label>
+                                        </li>
+                                        <li class="col_opt_li brand_li">
+                                            <div class="opt_radio">
+                                                <div class="radio_border"></div>
+                                                <div class="radio_big"></div>
+                                                <div class="radio_small"></div>
+                                                <input type="radio" name="brand_rd" id="brand_rd5">
+                                            </div>
+                                            <label for="brand_rd5"><span>BALMAIN</span></label>
+                                        </li>
+                                        <li class="col_opt_li brand_li">
+                                            <div class="opt_radio">
+                                                <div class="radio_border"></div>
+                                                <div class="radio_big"></div>
+                                                <div class="radio_small"></div>
+                                                <input type="radio" name="brand_rd" id="brand_rd6">
+                                            </div>
+                                            <label for="brand_rd6"><span>DKNY</span></label>
+                                        </li>
+                                        <li class="col_opt_li brand_li">
+                                            <div class="opt_radio">
+                                                <div class="radio_border"></div>
+                                                <div class="radio_big"></div>
+                                                <div class="radio_small"></div>
+                                                <input type="radio" name="brand_rd" id="brand_rd7">
+                                            </div>
+                                            <label for="brand_rd7"><span>MONTBLANC</span></label>
+                                        </li>
+                                        <li class="col_opt_li brand_li">
+                                            <div class="opt_radio">
+                                                <div class="radio_border"></div>
+                                                <div class="radio_big"></div>
+                                                <div class="radio_small"></div>
+                                                <input type="radio" name="brand_rd" id="brand_rd8">
+                                            </div>
+                                            <label for="brand_rd8"><span>BALENCIAGA</span></label>
+                                        </li>
+                                        <li class="col_opt_li brand_li">
+                                            <div class="opt_radio">
+                                                <div class="radio_border"></div>
+                                                <div class="radio_big"></div>
+                                                <div class="radio_small"></div>
+                                                <input type="radio" name="brand_rd" id="brand_rd9">
+                                            </div>
+                                            <label for="brand_rd9"><span>SONIA RYKIEL</span></label>
+                                        </li>
+                                        <li class="col_opt_li brand_li">
+                                            <div class="opt_radio">
+                                                <div class="radio_border"></div>
+                                                <div class="radio_big"></div>
+                                                <div class="radio_small"></div>
+                                                <input type="radio" name="brand_rd" id="brand_rd10">
+                                            </div>
+                                            <label for="brand_rd10"><span>O&X</span></label>
+                                        </li>
+                                        <li class="col_opt_li brand_li">
+                                            <div class="opt_radio">
+                                                <div class="radio_border"></div>
+                                                <div class="radio_big"></div>
+                                                <div class="radio_small"></div>
+                                                <input type="radio" name="brand_rd" id="brand_rd11">
+                                            </div>
+                                            <label for="brand_rd11"><span>KIO YAMATO</span></label>
+                                        </li>
+                                        <li class="col_opt_li brand_li">
+                                            <div class="opt_radio">
+                                                <div class="radio_border"></div>
+                                                <div class="radio_big"></div>
+                                                <div class="radio_small"></div>
+                                                <input type="radio" name="brand_rd" id="brand_rd12">
+                                            </div>
+                                            <label for="brand_rd12"><span>BALLY</span></label>
+                                        </li>
+                                        <li class="col_opt_li brand_li">
+                                            <div class="opt_radio">
+                                                <div class="radio_border"></div>
+                                                <div class="radio_big"></div>
+                                                <div class="radio_small"></div>
+                                                <input type="radio" name="brand_rd" id="brand_rd13">
+                                            </div>
+                                            <label for="brand_rd13"><span>MOLSION</span></label>
+                                        </li>
+                                        <li class="col_opt_li brand_li">
+                                            <div class="opt_radio">
+                                                <div class="radio_border"></div>
+                                                <div class="radio_big"></div>
+                                                <div class="radio_small"></div>
+                                                <input type="radio" name="brand_rd" id="brand_rd14">
+                                            </div>
+                                            <label for="brand_rd14"><span>BOLON</span></label>
+                                        </li>
+                                        <li class="col_opt_li brand_li">
+                                            <div class="opt_radio">
+                                                <div class="radio_border"></div>
+                                                <div class="radio_big"></div>
+                                                <div class="radio_small"></div>
+                                                <input type="radio" name="brand_rd" id="brand_rd15">
+                                            </div>
+                                            <label for="brand_rd15"><span>ENDYMION</span></label>
+                                        </li>
+                                        <li class="col_opt_li brand_li">
+                                            <div class="opt_radio">
+                                                <div class="radio_border"></div>
+                                                <div class="radio_big"></div>
+                                                <div class="radio_small"></div>
+                                                <input type="radio" name="brand_rd" id="brand_rd16">
+                                            </div>
+                                            <label for="brand_rd16"><span>MILA SCHON</span></label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col_sort">
+                            <div class="col_sort_box">
+                                <div class="col_sort_item sunglasses">
+                                    <a href="collection.html?cate_no=0">Sunglasses</a>
+                                </div>
+                                <div class="col_sort_item">|</div>
+                                <div class="col_sort_item optical">
+                                    <a href="collection.html?cate_no=1">Optical</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col_item">
+                        
+                        <div class="col_sunglasses">
+                            <!-- 정보넣기 -->
+                            <!-- <div class="col_item_box">
+                                <a href="#">
+                                    <div class="item_img">
+                                        <img src="img/dk_items/1/DK-709SK-014.jpg" alt="sunglass">
+                                    </div>
+                                    <div class="col_item_txt">
+                                        <p>DKNY</p>
+                                        <p>DK-709SK</p>
+                                    </div>
+                                </a>
+                            </div> -->
+                        </div>
+                        <div class="col_sunglasses"></div>
+                        <div class="col_sunglasses"></div>
+                        <div class="col_sunglasses"></div>
+                        <div class="col_sunglasses"></div>
+
+
+
+                        <div class="col_optical">
+                            <!-- 정보넣기 -->
+                        </div>
+                        <div class="col_optical"></div>
+                        <div class="col_optical"></div>
+                        <div class="col_optical"></div>
+                        <div class="col_optical"></div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="pagenation_wrap">
+                <div class="pagenation">
+                    <span class="fist_page"><i class="fas fa-angle-double-left"></i></span>
+                    <span class="prev_page"><i class="fas fa-angle-left"></i></span>
+                    <ul class="page_no_ul">
+                        <li class="page_no">1</li>
+                        <li class="page_no">2</li>
+                        <li class="page_no">3</li>
+                        <li class="page_no">4</li>
+                        <li class="page_no">5</li>
+                    </ul>
+                    <span class="next_page"><i class="fas fa-angle-right"></i></span>
+                    <span class="last_page"><i class="fas fa-angle-double-right"></i></span>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p>© 2016 DK CORP. ALL RIGHTS RESERVED</p>
+        </footer>
+    </div>
+</body>
+</html>

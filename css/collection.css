@@ -1,0 +1,438 @@
+.h_col_search {
+    width: 28px;
+    padding-right: 20px;
+    cursor: pointer;
+    position: absolute;
+    top: 50px;
+    right: 55px;
+}
+main {padding-top: 80px;}
+.colloction_tit{
+    width: 100%;
+    padding: 100px 0;
+    text-align: center;
+    font-family: 'Bodoni Moda', serif;
+    color: #222;
+}
+.col_container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.col_letter{
+    display: inline-block;
+    font-size: 200px;
+    font-weight: 400;
+    letter-spacing: -7px;
+}
+/* ///////글자 애니메이션/////// */
+.col_letter_ac:nth-child(1) ,
+.col_letter_ac:nth-child(8) {
+   animation: col_down1 1s;
+}
+.col_letter_ac:nth-child(2) ,
+.col_letter_ac:nth-child(9) {
+    animation: col_up1 1s;
+}
+.col_letter_ac:nth-child(3) {
+    animation: col_up2 1s;
+}
+.col_letter_ac:nth-child(4) ,
+.col_letter_ac:nth-child(10) {
+    animation: col_up3 1s;
+}
+.col_letter_ac:nth-child(5) ,
+.col_letter_ac:nth-child(7) {
+    animation: col_down2 1s;
+}
+.col_letter_ac:nth-child(6) {
+    animation: col_up4 1s;
+}
+@keyframes col_down1 {
+    0% {transform: translateY(-90px); opacity:0.5;}
+    100%{transform: translateY(0); opacity:1;}
+}
+@keyframes col_down2 {
+    0% {transform: translateY(-60px); opacity:0.5;}
+    100%{transform: translateY(0); opacity:1;}
+}
+@keyframes col_up1 {
+    0% {transform: translateY(40px); opacity:0.5;}
+    100%{transform: translateY(0); opacity:1;}
+}
+@keyframes col_up2 {
+    0% {transform: translateY(100px); opacity:0.5;}
+    100%{transform: translateY(0); opacity:1;}
+}
+@keyframes col_up3 {
+    0% {transform: translateY(70px); opacity:0.5;}
+    100%{transform: translateY(0); opacity:1;}
+}
+@keyframes col_up4 {
+    0% {transform: translateY(50px); opacity:0.5;}
+    100%{transform: translateY(0); opacity:1;}
+}
+/* /////////메인////////// */
+.main_sec{
+    width: 100%;
+    overflow: hidden;
+    padding: 0 5%;
+    box-sizing: border-box;
+    position: relative;
+}
+.collection_category{
+    position: absolute;
+}
+.collection_item_sec{
+    width: 100%;
+    max-width: 1186px;
+    margin: 0 auto;
+    /* background: lemonchiffon; */
+}
+.col_opc_sec{
+    width: 100%;
+    height: 40px;
+    position: relative;
+}
+.col_category{
+    /* width: 169px; */
+    position: fixed;
+    left: 5%;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.col_opt{
+    width: 180px;
+    margin-right: 15px;
+}
+.brand_cate_opt {
+    left: 200px;
+}
+.col_box {
+    border-bottom: 1px solid #aaa;
+    cursor: pointer;
+    padding: 0 3px 6px;
+    box-sizing: border-box;
+    position: relative;
+}
+.col_box p{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 2em;
+    color: #222;
+    display: inline-block;
+}
+
+.opt_arrow {
+    float: right;
+    line-height: 2em;
+    position: absolute;
+    top: 50%;
+    right: 3px;
+    transform: translateY(-50%);
+    transition: all 0.3s;
+}
+.opt_arrow_ac {
+    transform: translateY(-50%) rotate(180deg);
+}
+.col_content {
+    width: 100%;
+    overflow: hidden;
+    background: #fff;
+    display: none;
+    padding: 15px 10px;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 99;
+}
+
+.col_content ul {
+    width: 100%;
+    overflow: hidden;
+}
+.col_opt_li {
+    cursor: pointer;
+    margin-top: 7px;
+    position: relative;
+}
+.col_opt_li * {
+    cursor: pointer;
+}
+.col_opt_li:first-child {
+    margin-top: 0;
+}
+.opt_radio{
+    width: 14px;
+    height: 100%;
+    float: left;
+    position: relative;    
+}
+.radio_border {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 1px solid #aaa;
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.radio_big{
+    width: 14px;
+    height: 14px;
+    background: #222;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+.radio_small{
+    width: 5px;
+    height: 5px;
+    background: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+.opt_radio input {
+    opacity: 0;
+}
+.col_opt_li label {
+    display: inline-block;
+    padding-left: 10px;
+    box-sizing: border-box;
+    font-size: 15px;
+    color: #aaa;
+}
+.col_sort{
+    font-family: 'Noto Sans KR', sans-serif;
+    position: absolute;
+    right: 0;
+}
+.col_sort_box{
+    width: 100%;
+}
+.col_sort_item{
+    display: inline-block;
+    margin: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 2em;
+    color: #aaa;
+}
+.col_sort_item_ac{color: #222;}
+.col_sort_item:nth-child(2){
+    font-size: 10px;
+}
+.sunglasses, .optical {
+    cursor: pointer;
+}
+.sunglasses:hover, .optical:hover {
+    color: #222;
+}
+.col_sort_item_ac {
+    color: #222;
+}
+.col_item{
+    width: 100%;
+    overflow: hidden;
+    padding-top: 100px;
+    box-sizing: border-box;
+}
+.col_sunglasses{
+    width: 100%;
+    display: block;
+}
+.col_optical {
+    width: 100%;
+    overflow: hidden;
+    display: none;
+}
+.col_item_box{
+    width: 46.2%;
+    /* background: lightslategray; */
+    float: left;
+    margin-right: 7.6%;
+    margin-bottom: 6.7%;
+    
+    box-sizing: border-box;
+}
+.col_item_box a {
+    display: block;
+    margin: 0 45px 0 141px;
+}
+.col_item_box:nth-child(2n) {
+    margin-right: 0;
+}
+.item_img {
+    width: 100%;
+    transform: scale(1);
+    transition: all 0.3s;
+}
+.item_img:hover {
+    transform: scale(1.1);
+}
+.col_item_txt{
+    width: 100%;
+    padding: 13px 93px 0 0;
+    text-align: center;
+    box-sizing: border-box;
+}
+.col_item_txt p:nth-child(1) {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 3px;
+    letter-spacing: 1px;
+    font-family: 'Khula', sans-serif;
+}
+.col_item_txt p:nth-child(2) {
+    font-size: 19px;
+    font-weight: 700;
+    color: #333;
+    font-family: 'Bodoni Moda', serif;
+}
+.pagenation_wrap{
+    padding: 20px 5% 176px;
+    box-sizing: border-box;
+    text-align: center;
+}
+.pagenation {
+    display: inline-block;
+    /* background: lightblue; */
+    color: #aaa;
+}
+.pagenation span {
+    vertical-align: super;
+    cursor: pointer;
+}
+.page_no_ul{
+    overflow: hidden;
+    display: inline-block;
+    transform: translateY(9px);
+    font-family: 'Khula', sans-serif;
+    color: #aaa;
+}
+.page_no {
+    float: left;
+    padding: 5px 12px;
+    box-sizing: border-box;
+    font-size: 17px;
+    cursor: pointer;
+}
+.page_no:hover {
+    color: #222
+}
+.page_no_ac {
+    color: #222;
+}
+.pagenation span {
+    font-size: 13px;
+    color: #666;
+}
+.prev_page, .next_page {
+    padding: 0 10px;
+}
+footer {
+    padding: 25px 0 90px;
+}
+footer p {
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+    font-family: 'Khula', sans-serif;
+    letter-spacing: 2px;
+}
+
+/* //////////////////////반응형//////////////////////////////// */
+
+@media (max-width: 1740px) {
+    .col_category{
+        width: auto;
+        /* margin-left: 0; */
+        position: absolute;
+        left: 0;
+        font-family: 'Noto Sans KR', sans-serif;
+        top: 0;
+    }
+    .col_opt{
+        width: 180px;
+        margin-right: 15px;
+        float: left;
+    }
+    
+}
+@media (max-width: 1320px) {
+    .col_item_box a {
+       margin: 0 8.2%;
+    }
+}
+@media (max-width: 1280px) {
+    .colloction_tit {
+        padding: 100px 0 80px;
+    }
+    .col_letter{
+        font-size: 125px;
+    }
+    .col_opc_sec {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .col_opt {
+        width: 160px;
+    }
+    .col_box p {
+        font-size: 13px;
+    }
+    .opt_arrow {
+        font-size: 16px;
+    }
+    .col_sort_item {
+        font-size: 13px;
+    }
+    .col_item {
+        max-width: 996px;
+        margin: 0 auto;
+        padding-top: 80px;
+    }
+    .col_item_box {
+        margin-bottom: 10%;
+    }
+    .col_item_txt{
+        padding-right: 0;
+    }
+}
+@media (max-width: 1023px) {
+    .col_letter {
+        font-size: 107px;
+    }
+    .colloction_tit {
+        padding: 100px 0 50px;
+    }
+    .col_item_txt p:nth-child(1) {
+        font-size: 12px;
+    }
+    .col_item_txt p:nth-child(2) {
+        font-size: 17px;
+    }
+}
+@media (max-width: 1023px) {
+    .col_letter {
+        font-size: 100px;
+    }
+    .col_item_txt p:nth-child(1) {
+        letter-spacing: 0px;
+        font-size: 11px;
+    }
+    .col_item_txt p:nth-child(2) {
+        font-size: 14px;
+    }
+
+
+
+
+
+}

@@ -1,19 +1,19 @@
 const RELATED_ITEM = [
-    {src:'BL-5128K_S-1', brand:'BALMAIN', item_name:'BL-5128K'},
-    {src:'BL-5129K-2', brand:'BALMAIN', item_name:'BL-5129K'},
-    {src:'BL-6054K_S', brand:'BALMAIN', item_name:'BL-6054K'},
-    {src:'BY-7057K_S', brand:'BALLY', item_name:'BY-7057K'},
+    {src:'DP-6660_S', brand:'S.T.DUPONT', item_name:'DP-6660'},
+    {src:'DP-6661_S-1', brand:'S.T.DUPONT', item_name:'DP-6661'},
+    {src:'EM-840P', brand:'ENDYMION', item_name:'EM-840P'},
+    {src:'GG-0222SK', brand:'GUCCI', item_name:'GG-0222SK'},
     {src:'BY-7066K', brand:'BALLY', item_name:'BY-7066K'},
     {src:'DK-707SK_S-1', brand:'DKNY', item_name:'DK-707SK'},
     {src:'DP-6646-1', brand:'S.T.DUPONT', item_name:'DP-6646'},
-    {src:'DP-6660_S', brand:'S.T.DUPONT', item_name:'DP-6660'},
-    {src:'DP-6661_S-1', brand:'S.T.DUPONT', item_name:'DP-6661'},
     {src:'EM-219P', brand:'ENDYMION', item_name:'EM-219P'},
-    {src:'EM-840P', brand:'ENDYMION', item_name:'EM-840P'},
+    {src:'BL-5129K-2', brand:'BALMAIN', item_name:'BL-5129K'},
+    {src:'KP-223AU-1', brand:'KENZO', item_name:'KP-223AU'},
+    {src:'BL-6054K_S', brand:'BALMAIN', item_name:'BL-6054K'},
     {src:'GG-0061S', brand:'GUCCI', item_name:'GG-0061S'},
-    {src:'GG-0222SK', brand:'GUCCI', item_name:'GG-0222SK'},
+    {src:'BY-7057K_S', brand:'BALLY', item_name:'BY-7057K'},
     {src:'GG-0590OK-1-2', brand:'GUCCI', item_name:'GG-0590OK'},
-    {src:'KP-223AU-1', brand:'KENZO', item_name:'KP-223AU'}
+    {src:'BL-5128K_S-1', brand:'BALMAIN', item_name:'BL-5128K'},
 ]
 function get_url_info(key) { 
     let url = location.href; // collection.html?cate_no=0&item_no=3
@@ -28,13 +28,11 @@ function get_url_info(key) {
             return tmp_url[1];
         }
     };
-    // url = url[1].split("?item_no="); // [collection.html, 3]
-    // let tmp_url=url[1].split("="); // [item_no, 3]
-    
 };
+
 const cate_num = Number(get_url_info("cate_no")); 
 const item_num = Number(get_url_info("item_no"));
-console.log(item_num)
+// console.log(item_num)
 $(document).ready(function(){
     ///////헤더 스크롤///////
     let h_o_top = $('.header_wrap').height();
@@ -42,47 +40,16 @@ $(document).ready(function(){
 
         let s_top = $(window).scrollTop();
         if(h_o_top <= s_top) {
-            $('.header_fixed').css({
-                position: 'fixed',
-                top: 0,
-                left: 0,
-                background: 'rgba(255, 255, 255, 0.9)',
-                boxShadow: '0 1px 3px rgba(0, 0, 0, 15%)',
-                transition: 'all 0.3s',
-                zIndex: '999'
-            })
-            $('.h_logo').css({
-                top: '50%',
-                transform: 'translateY(-40%)'
-            })
-            $('.h_col_search').css({
-                top: '50%',
-                transform: 'translateY(-35%)'
-            })
-            $('.h_menu').css({
-                top: '50%',
-                transform: 'translateY(-35%)'
-            })
+            $('.header_fixed').addClass('header_fixed_ac');
+            $('.h_logo').addClass('h_logo_ac')
+            $('.h_col_search').addClass('h_col_search_ac')
+            $('.h_menu').addClass('h_menu_ac')
         }
         else {
-            $('.header_fixed').css({
-                position: "absolute",
-                top: 0,
-                background: '#fff',
-                boxShadow: 'none'
-            })
-            $('.h_logo').css({
-                top: '43px',
-                transform: 'translateY(0)'
-            })
-            $('.h_col_search').css({
-                top: '50px',
-                transform: 'translateY(0)'
-            })
-            $('.h_menu').css({
-                top: '42px',
-                transform: 'translateY(0)'
-            })
+            $('.header_fixed').removeClass('header_fixed_ac');
+            $('.h_logo').removeClass('h_logo_ac')
+            $('.h_col_search').removeClass('h_col_search_ac')
+            $('.h_menu').removeClass('h_menu_ac')
         }
         
     });
@@ -106,13 +73,16 @@ $(document).ready(function(){
     });
 
     function scrolling(current_per) {
-        ctx.clearRect(0, 0, cav_width, cav_width);
+        ctx.clearRect(0, 0, 65, 65);
         ctx.beginPath(); 
         ctx.arc(cav_width/2, cav_width/2, cav_width/2-0.5, pi * -90, pi * current_per, false);
         ctx.lineWidth=1;
         ctx.stroke();
     };
-
+    scrolling()
+    $(window).resize(function(){
+        scrolling(current_per)
+    })
     $('.top_btn').click(function(event){
         event.preventDefault();
         $('html, body').animate({
@@ -136,7 +106,6 @@ $(document).ready(function(){
                     var src_room = tmp_src.split(',');
                     for(let j =0; j<src_room.length;j++){
                         list+=     '<img src="img/dk_items/'+COLLECTION_ITEM_SUNG[item_num-1].item_no+'/'+src_room[j]+'.jpg" alt="sunglass" class="item_b_img">';
-                        
                     }
                 }
             }
@@ -211,26 +180,19 @@ $(document).ready(function(){
         $('.item_detail_sec').append(opt_list)
     }
 
-    
-
-
-
     ///////돋보기///////
     let mag = $('.magnifier');
-    let target = $('.item_big_img');   //////////////////인덱스 잡아주기
+    let target = $('.item_big_img');
     let target_w = target.width();
     let target_h = target.height();
 
     $('.item_big_img').mousemove(function(event){
-        // 이미지 기준 마우스의 좌표(이미지의 위치를 브라우저의 0 0 지점부터까지의 거리를 뺀다 )
         let mouse_x = event.pageX - target.offset().left;
         let mouse_y = event.pageY - target.offset().top
 
-        // 마우스가 돋보기 가운데 위치하게 하기
         let pos_x = mouse_x - (mag.outerWidth () / 2);
         let pos_y = mouse_y - (mag.outerHeight() / 2);
 
-        // 배경 이미지 위치 변경(배경이미지가 원의 가운데 오게 하기)
         let rx = -1 * pos_x;
         let ry = -1 * pos_y;
 
@@ -281,28 +243,34 @@ $(document).ready(function(){
         }
 
     })
-
+    
     ///////관련상품 정보넣기///////
     for(i=0; i<$('.indi').length; i++) {
         let list =   '<div class="rel_img_ban_box">';
             list+=      '<div class="rel_box">';
-            list+=          '<img src="img/dk_items/related/'+RELATED_ITEM[i].src+'.jpg" alt="rel_sunglass">';
-            list+=          '<p class="rel_brand_name">'+RELATED_ITEM[i].brand+'</p>';
-            list+=          '<p class="rel_item_name">'+RELATED_ITEM[i].item_name+'</p>';
+            list+=          '<a href="item.html?cate_no=0&item_no=13">';
+            list+=              '<img src="img/dk_items/related/'+RELATED_ITEM[(i*3)].src+'.jpg" alt="rel_sunglass">';
+            list+=              '<p class="rel_brand_name">'+RELATED_ITEM[(i*3)].brand+'</p>';
+            list+=              '<p class="rel_item_name">'+RELATED_ITEM[(i*3)].item_name+'</p>';
+            list+=          '</a>';
             list+=      '</div>';
             list+=      '<div class="rel_box">';
-            list+=          '<img src="img/dk_items/related/'+RELATED_ITEM[i+1].src+'.jpg" alt="rel_sunglass">';
-            list+=          '<p class="rel_brand_name">'+RELATED_ITEM[i+1].brand+'</p>';
-            list+=          '<p class="rel_item_name">'+RELATED_ITEM[i+1].item_name+'</p>';
+            list+=          '<a href="item.html?cate_no=0&item_no=3">';
+            list+=              '<img src="img/dk_items/related/'+RELATED_ITEM[(i*3)+1].src+'.jpg" alt="rel_sunglass">';
+            list+=              '<p class="rel_brand_name">'+RELATED_ITEM[(i*3)+1].brand+'</p>';
+            list+=              '<p class="rel_item_name">'+RELATED_ITEM[(i*3)+1].item_name+'</p>';
+            list+=          '</a>';
             list+=      '</div>';
             list+=      '<div class="rel_box">';
-            list+=          '<img src="img/dk_items/related/'+RELATED_ITEM[i+2].src+'.jpg" alt="rel_sunglass">';
-            list+=          '<p class="rel_brand_name">'+RELATED_ITEM[i+2].brand+'</p>';
-            list+=          '<p class="rel_item_name">'+RELATED_ITEM[i+2].item_name+'</p>';
+            list+=          '<a href="item.html?cate_no=0&item_no=11">';
+            list+=              '<img src="img/dk_items/related/'+RELATED_ITEM[(i*3)+2].src+'.jpg" alt="rel_sunglass">';
+            list+=              '<p class="rel_brand_name">'+RELATED_ITEM[(i*3)+2].brand+'</p>';
+            list+=              '<p class="rel_item_name">'+RELATED_ITEM[(i*3)+2].item_name+'</p>';
+            list+=          '</a>';
             list+=      '</div>';
             list+=   '</div>';
 
-            $('.rel_img_ban_outer').append(list)
+            $('.rel_img_ban_outer').append(list) 
     }
 
 
@@ -312,10 +280,14 @@ $(document).ready(function(){
     let rel_count = $('.rel_img_ban_box').length;
 
     // 이미지 박스 크기 지정
-    let rel_img_ban_outer = $('.rel_img_ban_outer').outerWidth();
-    $('.rel_img_ban_outer .rel_img_ban_box').width(rel_img_ban_outer);
+    setTimeout(function(){
+        let rel_img_ban_outer = $('.rel_img_ban_outer').innerWidth();
+        $('.rel_img_ban_outer .rel_img_ban_box').width(rel_img_ban_outer);
+    },100)
+    
+
     $(window).resize(function(){
-        let rel_img_ban_outer = $('.rel_img_ban_outer').outerWidth();
+        let rel_img_ban_outer = $('.rel_img_ban_outer').innerWidth();
         $('.rel_img_ban_outer .rel_img_ban_box').width(rel_img_ban_outer);
     });
 
@@ -327,7 +299,7 @@ $(document).ready(function(){
         //들어올
         $('.rel_img_ban_box').eq(c_ind).css({
             left: c_pos
-        }).animate({
+        }).stop().animate({
             left:0
         },rel_timer)
         //나갈
@@ -373,4 +345,36 @@ $(document).ready(function(){
         rel_slide(rel_index % rel_count, '100%', (rel_index -1) %  rel_count, '-100%');
         rel_index+=1;
     })
+
+    /////////////////////반응형///////////////////////
+    //관련상품 터치 슬라이드
+    let rel_posx=0;
+    let rel_posx2=0;
+
+    $(document).bind('touchstart', function(){
+        rel_posx=-1;
+        rel_posx2=-1;
+
+        rel_posx=event.touches[0].pageX;
+    });
+
+    $(document).bind('touchmove', function(){
+        rel_posx2=event.touches[0].pageX;
+    })
+    
+    $(document).bind('touchend', function(){
+        if(rel_posx2 > -1 && rel_posx2 > rel_posx) {
+            //왼쪽버튼
+            $('.prev_btn').trigger('click')
+        }
+        else if(rel_posx2 > -1 && rel_posx2 < rel_posx) {
+            //오른쪽버튼
+            $('.next_btn').trigger('click')
+        }
+    })
+
+
+
+
+
 });

@@ -23,6 +23,50 @@ img{width: 100%;}
     overflow: hidden;
 }
 
+/* ////////fonts///////// */
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/materialicons/v88/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
+}
+@font-face {
+    font-family: 'Material Icons Outlined';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/materialiconsoutlined/v62/gok-H7zzDkdnRel8-DQ6KAXJ69wP1tGnf4ZGhUce.woff2) format('woff2');
+}
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+}
+
+.material-icons-outlined {
+    font-family: 'Material Icons Outlined';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+}
 /* //////////TOP BTN////////// */
 .top_btn{
     width: 65px;
@@ -346,6 +390,30 @@ img{width: 100%;}
 }
 .li_link:hover .fas {opacity: 1;}
 .sm_line {display: none;}
+
+.header_fixed_ac {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 15%);
+    transition: all 0.3s;
+    z-index: 999;
+}
+.h_logo_ac {
+    top: 50% !important;
+    transform: translateY(-40%);
+}
+.h_col_search_ac {
+    top: 50% !important;
+    transform: translateY(-40%);
+}
+.h_menu_ac {
+    top: 50% !important;
+    transform: translateY(-42%);
+}
+
+
 /* //////////////////////반응형//////////////////////////////// */
 
 @media (max-width: 855px) {
@@ -357,20 +425,17 @@ img{width: 100%;}
         color: #fff !important;
         top: 17px;
     }
-    .h_logo {
-        letter-spacing: -1px;
-        top: 17px;
-    }
     .h_search {
         padding-right: 0;
         top: 22px;
         right: 44px;
     }
     .h_menu {
-        top: 14px;
+        top: 16px;
     }
     .index_h_sh_b{display: none !important;}
     .index_h_sh_w{display: block !important;}
+    
     .h_menu b {
         display: none;
     }
@@ -380,6 +445,9 @@ img{width: 100%;}
     .index_h_btn_line{
         margin-bottom: 8px;
         background-color: #fff !important;
+    }
+    .menu_btn_line {
+        margin-bottom: 8px;
     }
 
     /* ////햄버거 메뉴//// */
@@ -412,8 +480,15 @@ img{width: 100%;}
         transform: translateY(-4px) rotate(-45deg);
     }
     /* ///////////////// */
-    .main_menu_bg{
+    .main_menu_container {
+        height: auto;
         background: #111;
+    }
+    .main_menu_header {
+        height: 70px;
+    }
+    .main_menu_bg{
+        position: static;
     }
     .main_m_bg{
         display: none;
@@ -424,15 +499,16 @@ img{width: 100%;}
     .menu_outer{
         width: 84%;
         margin-left: 0;
-        padding-top: 86px;
-        left: 50%;
-        transform: translate(-50%);
         /* ///////////////// */
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         /* ///////////////// */
         /* overflow-y: scroll; */
+        position: static;
+        transform: translate(0);
+        margin: 0 auto;
+        padding-top: 0;
     }
     .menu_item{
         height: 100%;
@@ -465,10 +541,11 @@ img{width: 100%;}
     .sm_ul_wrap{
         width: 100%;
         margin-bottom: 10px;
+        margin-left: 10px;
         overflow-x: scroll;
     }
     .sm_col_brand{
-        margin-left: 10px;
+        margin-left: 0;
         display: inline-block;
         opacity: 0.6;
         position: absolute;
@@ -495,9 +572,15 @@ img{width: 100%;}
         width: auto;
         height: 100%;
     }
+    .sm_li_img:first-child {
+        margin-left: 0;
+    }
     .sm_link{overflow-x: hidden;}
     .sm_col_brand .fas {
         font-size: 12px;
+    }
+    .menu_guarantee {
+        margin-top: 20px;
     }
     /* //////////////////////////////// */
     .sm_line {
@@ -528,9 +611,15 @@ img{width: 100%;}
         margin: 3px 0;
         font-size: 12px;
     }
-
-
-
+    .magnifier {
+        display: none;
+    }
+}
+@media (max-width: 768px) {
+    .top_btn{
+        width: 50px;
+        height: 50px;
+    }
 }
 @media (max-width: 380px) {
     .h_logo, .menu_logo {
@@ -545,7 +634,6 @@ img{width: 100%;}
         letter-spacing: -2px;
     }
 }
-
 
 
 

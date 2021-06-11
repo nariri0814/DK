@@ -69,28 +69,26 @@ const COLLECTION_ITEM_SUNG = [
     //20
     {item_no: 20, src: 'VW31_2-1,VW28_2-1,VW29_2-1,VW30_2-1', brand:'VIVIENNE WESTWOOD', name:'VW-1531S', color:'#000,#4f2012,#dd9292,#e5e5e5'}
 ];
-// list[20].src //'VW31_2-1,VW28_2-1,VW29_2-1, VW30_2-1'
-// list[20].src.split(",") //['VW31_2-1 ,VW28_2-1 ,VW29_2-1 , VW30_2-1']
 
 const COLLECTION_ITEM_OPTI = [
     {item_no: 1, src: 'KP-249AU-1,KP-249AU-2,KP-249AU-3,KP-249AU-4', brand:'KIO YAMATO', name:'KP-249', color:'#000,#7f6919,#7f3d1c,#3497aa'},
-    {item_no: 2, src: 'KP-248AU-4,KP-248AU-1,KP-248AU-2,KP-248AU-3', brand:'KIO YAMATO', name:'KP-248', color:'#000,#a37720,#6b4000,#cecece'},
-    {item_no: 3, src: 'KP-247AU-3,KP-247AU-1,KP-247AU-2,KP-247AU-4', brand:'KIO YAMATO', name:'KP-247', color:'#000,#91621d,#bababa'},
+    {item_no: 2, src: 'KP-248AU-4,KP-248AU-1,KP-248AU-2,KP-248AU-3', brand:'KIO YAMATO', name:'KP-248', color:'#cecece,#000,#a37720,#6b4000'},
+    {item_no: 3, src: 'KP-247AU-3,KP-247AU-1,KP-247AU-2,KP-247AU-4', brand:'KIO YAMATO', name:'KP-247', color:'#bababa,#000,#91621d'},
     {item_no: 4, src: 'KP-246-1,KP-246-2,KP-246-3,KP-246-4', brand:'KIO YAMATO', name:'KP-246', color:'#000,#8c6420,#dd7e7e,#afafaf'},
     {item_no: 5, src: 'MB-0141OK-1,MB-0141OK-2,MB-0141OK-3,MB-0141OK-4', brand:'MONTBLANC', name:'MB-0141OK', color:'#e8e8e8,#ddcc33,#757575,#775d16'},
     {item_no: 6, src: 'MB-0140OK-2,MB-0140OK-3', brand:'MONTBLANC', name:'MB-0140OK', color:'#e0d433,#dbdbdb'},
     {item_no: 7, src: 'MB-0139OK-1,MB-0139OK-2,MB-0139OK-3,MB-0139OK-4', brand:'MONTBLANC', name:'MB-0139OK', color:'#bfbfbf,#e2cf1f,#bfbfbf'},
-    {item_no: 8, src: 'VW-430V-4,VW-430V-2,VW-430V-3', brand:'VIVIENNE WESTWOOD', name:'VW-430V', color:'#000,#935220,#a32345,#dd8585'},
-    {item_no: 9, src: 'VW-429V-4,VW-429V-1,VW-429V-2,VW-429V-3', brand:'VIVIENNE WESTWOOD', name:'VW-429V', color:'#000,#8e651d,#962241,#d996f2'},
+    {item_no: 8, src: 'VW-430V-4,VW-430V-2,VW-430V-3', brand:'VIVIENNE WESTWOOD', name:'VW-430V', color:'#dd8585,#935220,#a32345'},
+    {item_no: 9, src: 'VW-429V-4,VW-429V-1,VW-429V-2,VW-429V-3', brand:'VIVIENNE WESTWOOD', name:'VW-429V', color:'#d996f2,#000,#8e651d,#962241'},
     {item_no: 10, src: 'DP-6202-1,DP-6202-2,DP-6202-3', brand:'VIVIENNE WESTWOOD', name:'DP-6202', color:'#000,#701200,#ddbb33'},
     {item_no: 11, src: 'VW-427V-1,VW-427V-2,VW-427V-3,VW-427V-4', brand:'VIVIENNE WESTWOOD', name:'VW-427V', color:'#000,#9e6321,#af3224,#dd8989'},
     {item_no: 12, src: 'VW-426V-1,VW-426V-2,VW-426V-3,VW-426V-4', brand:'VIVIENNE WESTWOOD', name:'VW-426V', color:'#e5c834,#a06123,#dd8282,#cbb9c5'},
     {item_no: 13, src: 'DP-6210-1,DP-6210-2,DP-6210-3', brand:'S.T.DUPONT', name:'DP-6210', color:'#000,#ad7f4a,#6b4402'},
-    {item_no: 14, src: 'DP-6209-3,DP-6209-1,DP-6209-2', brand:'S.T.DUPONT', name:'DP-6209', color:'#000,#916021,#aaaaaa'},
+    {item_no: 14, src: 'DP-6209-3,DP-6209-1,DP-6209-2', brand:'S.T.DUPONT', name:'DP-6209', color:'#aaaaaa,#000,#916021'},
     {item_no: 15, src: 'DP-6208-1,DP-6208-2,DP-6208-3,DP-6208-4', brand:'S.T.DUPONT', name:'DP-6208', color:'#000,#a5a5a5,#5e5e5e,#84641a'},
     {item_no: 16, src: 'DP-6207-1,DP-6207-2,DP-6207-3,DP-6207-4', brand:'S.T.DUPONT', name:'DP-6207', color:'#000,#d1d1d1,#e0b833,#5e5e5e'},
-    {item_no: 17, src: 'DP-6206-3,DP-6206-1,DP-6206-2', brand:'S.T.DUPONT', name:'DP-6206', color:'#000,#894b1b,#e0b833'},
-    {item_no: 18, src: 'DP-6205-3,DP-6205-1,DP-6205-2', brand:'S.T.DUPONT', name:'DP-6205', color:'#000,#6b2413,#566e79'},
+    {item_no: 17, src: 'DP-6206-3,DP-6206-1,DP-6206-2', brand:'S.T.DUPONT', name:'DP-6206', color:'#e0b833,#000,#894b1b'},
+    {item_no: 18, src: 'DP-6205-3,DP-6205-1,DP-6205-2', brand:'S.T.DUPONT', name:'DP-6205', color:'#566e79,#000,#6b2413'},
     {item_no: 19, src: 'DP-6204-1,DP-6204-2,DP-6204-3', brand:'S.T.DUPONT', name:'DP-6204', color:'#000,#a37025,#aa9f61'},
     {item_no: 20, src: 'DP-6203-1,DP-6203-2,DP-6203-4', brand:'S.T.DUPONT', name:'DP-6203', color:'#000,#91491f,#a3a3a3'}
 ];
@@ -139,7 +137,7 @@ $(document).ready(function(){
             };
         };
 
-        //브랜드 로고 슬라이드
+        /////////////////브랜드 로고 슬라이드/////////////////////
         //2번째 로고박스 배치
         for(i=0; i<$('.menu_collection .mc_count').length; i++) { //4
             let m_col_m2_pos = $('.menu_collection .mc_count').eq(i).children('.menu_col_item').children().eq(0).outerWidth();
@@ -163,7 +161,7 @@ $(document).ready(function(){
             },int_speed, 'linear').animate({
                 left: tmp.find('.menu_col_move').width()
             },0)
-        }
+        };
 
         let logo_inter;
         $('.menu_collection .mc_count').hover(function(){
@@ -192,7 +190,6 @@ $(document).ready(function(){
             }, 0)
 
         });
-        
             
     });
     
@@ -215,23 +212,21 @@ $(document).ready(function(){
     
     ///////////휠 이벤트 메뉴 슬라이드///////////
     let chk = true;
-    let menu_sc_timer = 500;
+    let menu_sc_timer = 400;
     let sc_index = 1;
     let mi_count = $('.menu_item').length;
     let menu_pos = 0;
 
      
     function chk_resize() {
-        if($(window).width() < 800) {
+        if($(window).width() < 855) {
             $('.main_menu_container').off("mousewheel DOMMouseScroll");
-
-            ////////////메인&메뉴 디스플레이 논 블럭 여기에도 써주기
         }
         else {
             main_scroll()
         }
-    }
-    chk_resize()
+    };
+    chk_resize();
 
     function main_scroll() {
         $('.main_menu_container').on("mousewheel DOMMouseScroll", function(e){
@@ -241,7 +236,7 @@ $(document).ready(function(){
                         chk = false;
                         setTimeout(function(){
                             chk = true;
-                        }, menu_sc_timer + 800 + 100); // 500 + 800 + 100
+                        }, menu_sc_timer + 700); // 500 + 800 + 100
              
                         // // 휠 위로 - 전판
                         if(e.originalEvent.wheelDelta >= 0  && sc_index > 0) {
@@ -262,15 +257,15 @@ $(document).ready(function(){
                         } 
                         $('.menu_outer').animate({
                             left: -1 * menu_pos
-                        },800);
+                        },600);
                     };
             
                 }); //휠이벤트 끝
-    }
+    };
     // main_scroll();
 
     $(window).resize(function(){
-        chk_resize()
+        chk_resize();
     });
 
     ///////////타이틀 호버 시 배경 바꾸기///////////
@@ -291,75 +286,6 @@ $(document).ready(function(){
         $('.main_m_bg1,.main_m_bg2,.main_m_bg3').css({opacity:0})
     });
 
-    ///////////////////// 반응형 /////////////////////
-
-    // let ttt = true;
-    // function sm_resize() {
-
-    //     if(ttt && $('body').width() <= 855) {
-    //         ttt=false
-    //     let list =      '<li class="sm_li_img">';
-    //         list+=          '<img src="img/menu/s_menu/DK/DK-anglomania.png" alt="dk_brand">';
-    //         list+=      '</li>';
-    //         list+=      '<li class="sm_li_img">';
-    //         list+=          '<img src="img/menu/s_menu/DK/DK-anglomania.png" alt="dk_brand">';
-    //         list+=      '</li>';
-    //         list+=      '<li class="sm_li_img">';
-    //         list+=          '<img src="img/menu/s_menu/DK/DK-anglomania.png" alt="dk_brand">';
-    //         list+=      '</li>';
-    //         list+=      '<li class="sm_li_img">';
-    //         list+=          '<img src="img/menu/s_menu/DK/DK-anglomania.png" alt="dk_brand">';
-    //         list+=      '</li>';
-    //         list+=      '<li class="sm_li_img">';
-    //         list+=          '<img src="img/menu/s_menu/DK/DK-anglomania.png" alt="dk_brand">';
-    //         list+=      '</li>';
-    //         list+=      '<li class="sm_li_img">';
-    //         list+=          '<img src="img/menu/s_menu/DK/DK-anglomania.png" alt="dk_brand">';
-    //         list+=      '</li>';
-    //         list+=      '<li class="sm_li_img">';
-    //         list+=          '<img src="img/menu/s_menu/DK/DK-anglomania.png" alt="dk_brand">';
-    //         list+=      '</li>';
-    //         list+=      '<li class="sm_li_img">';
-    //         list+=          '<img src="img/menu/s_menu/DK/DK-anglomania.png" alt="dk_brand">';
-    //         list+=      '</li>';
-    //         list+=      '<li class="sm_li_img">';
-    //         list+=          '<img src="img/menu/s_menu/DK/DK-anglomania.png" alt="dk_brand">';
-    //         list+=      '</li>';
-    //         list+=      '<li class="sm_li_img">';
-    //         list+=          '<img src="img/menu/s_menu/DK/DK-anglomania.png" alt="dk_brand">';
-    //         list+=      '</li>';
-    //         list+=      '<li class="sm_li_img">';
-    //         list+=          '<img src="img/menu/s_menu/DK/DK-anglomania.png" alt="dk_brand">';
-    //         list+=      '</li>';
-    //         list+=      '<li class="sm_li_img">';
-    //         list+=          '<img src="img/menu/s_menu/DK/DK-anglomania.png" alt="dk_brand">';
-    //         list+=      '</li>';
-    //         list+=      '<li class="sm_li_img">';
-    //         list+=          '<img src="img/menu/s_menu/DK/DK-anglomania.png" alt="dk_brand">';
-    //         list+=      '</li>';
-    //         list+=      '<li class="sm_li_img">';
-    //         list+=          '<img src="img/menu/s_menu/DK/DK-anglomania.png" alt="dk_brand">';
-    //         list+=      '</li>';
-    //         list+=      '<li class="sm_li_img">';
-    //         list+=          '<img src="img/menu/s_menu/DK/DK-anglomania.png" alt="dk_brand">';
-    //         list+=      '</li>';
-    //         list+=      '<li class="sm_li_img">';
-    //         list+=          '<img src="img/menu/s_menu/DK/DK-anglomania.png" alt="dk_brand">';
-    //         list+=      '</li>';
-    //         list+=      '<li class="sm_li_img">';
-    //         list+=          '<img src="img/menu/s_menu/DK/DK-anglomania.png" alt="dk_brand">';
-    //         list+=      '</li>';
-    //         $('.sm_menu_ul').children('.sm_col_brand').next().append(list);
-    //     }
-    //     else {
-    //         ttt = true;
-    //     }
-    // }
-    // sm_resize()
-    // //메뉴
-    // $(window).resize(function(){
-    //     sm_resize()
-    // })
 
 });
 

@@ -6,47 +6,16 @@ $(document).ready(function(){
 
         let s_top = $(window).scrollTop();
         if(h_o_top <= s_top) {
-            $('.header_fixed').css({
-                position: 'fixed',
-                top: 0,
-                left: 0,
-                background: 'rgba(255, 255, 255, 0.9)',
-                boxShadow: '0 1px 3px rgba(0, 0, 0, 15%)',
-                transition: 'all 0.3s',
-                zIndex: '999'
-            })
-            $('.h_logo').css({
-                top: '50%',
-                transform: 'translateY(-40%)'
-            })
-            $('.h_col_search').css({
-                top: '50%',
-                transform: 'translateY(-35%)'
-            })
-            $('.h_menu').css({
-                top: '50%',
-                transform: 'translateY(-35%)'
-            })
+            $('.header_fixed').addClass('header_fixed_ac');
+            $('.h_logo').addClass('h_logo_ac')
+            $('.h_col_search').addClass('h_col_search_ac')
+            $('.h_menu').addClass('h_menu_ac')
         }
         else {
-            $('.header_fixed').css({
-                position: "absolute",
-                top: 0,
-                background: '#fff',
-                boxShadow: 'none'
-            })
-            $('.h_logo').css({
-                top: '43px',
-                transform: 'translateY(0)'
-            })
-            $('.h_col_search').css({
-                top: '50px',
-                transform: 'translateY(0)'
-            })
-            $('.h_menu').css({
-                top: '42px',
-                transform: 'translateY(0)'
-            })
+            $('.header_fixed').removeClass('header_fixed_ac');
+            $('.h_logo').removeClass('h_logo_ac')
+            $('.h_col_search').removeClass('h_col_search_ac')
+            $('.h_menu').removeClass('h_menu_ac')
         }
         
     });
@@ -56,8 +25,7 @@ $(document).ready(function(){
     let canvas = $('.top_canvas');
     let ctx = canvas[0].getContext("2d");
     let pi = (Math.PI / 180);
-    let cav_width = $('.top_btn').width();
-
+    
     $(window).scroll(function(){
         current_per = -90 + (($(window).scrollTop() / ($(document).outerHeight() - $(window).height())) * 360);
         scrolling(current_per);
@@ -70,12 +38,19 @@ $(document).ready(function(){
     });
 
     function scrolling(current_per) {
-        ctx.clearRect(0, 0, cav_width, cav_width);
+        let cav_width = $('.top_btn').width();
+
+        ctx.clearRect(0, 0, 65, 65);
         ctx.beginPath(); 
         ctx.arc(cav_width/2, cav_width/2, cav_width/2-0.5, pi * -90, pi * current_per, false);
         ctx.lineWidth=1;
         ctx.stroke();
     };
+
+    scrolling()
+    $(window).resize(function(){
+        scrolling(current_per)
+    })
 
     $('.top_btn').click(function(event){
         event.preventDefault();
@@ -83,7 +58,6 @@ $(document).ready(function(){
             scrollTop: $('.wrap').offset().top
         }, 500)
     })
-
 
     ///////아이템 정보 불러오기///////
 
@@ -181,7 +155,6 @@ $(document).ready(function(){
         }
     }
 
-   
     ///////카테고리 박스 이벤트///////
     $('.company_box, .brand_box').click(function(){
         // 화살표 돌아감
@@ -189,11 +162,21 @@ $(document).ready(function(){
         // 밑에 카테고리 나옴
         $(this).next('.col_content').slideToggle(300);
     })
-    $('.col_opt_li').click(function(){
+    // 처음엔 첫번째것들 눌러있는것처럼
+    $('.company_li').eq(0).find('.radio_big, .radio_small').css({display:'block'});
+    $('.brand_li').eq(0).find('.radio_big, .radio_small').css({display:'block'});
+    
+    $('.company_li').click(function(){
         // 라디오 버튼 누르면 변경
-        $('.radio_big, .radio_small').css({display:'none'})
+        $('.company_li').find('.radio_big, .radio_small').css({display:'none'});
         $(this).find('.radio_big, .radio_small').css({display:'block'})
     })
+    $('.brand_li').click(function(){
+        // 라디오 버튼 누르면 변경
+        $('.brand_li').find('.radio_big, .radio_small').css({display:'none'});
+        $(this).find('.radio_big, .radio_small').css({display:'block'})
+    })
+    
     $('.col_opt_li').hover(function(){
         $(this).find('.radio_border').css({
             border: '1px solid #000'
@@ -211,6 +194,7 @@ $(document).ready(function(){
     })
 
     ///////아이템섹션///////
+
     //초기값
     $('.sunglasses').addClass('col_sort_item_ac');
     $('.col_sunglasses, .col_optical').css({display: 'none'});
@@ -268,6 +252,40 @@ $(document).ready(function(){
     })
 
 
+    ///////////////////반응형//////////////////////
+
+    ////// 카테고리 박스 //////
+    function col_cate_resize() {
+        if($(window).width() > 1740) {
+            // 화살표 돌려놓기
+            $('.opt_arrow').addClass('scr_arrow_ac');
+
+            // 카테고리 박스 펼쳐놓기
+            $('.col_content').css({display: 'block'});
+
+            // 카테 스크롤 이벤트
+            $(window).scroll(function(){
+                let s_top = $(window).scrollTop();
+                if(s_top >= $('.col_opc_sec').offset().top - 80) {
+                    $('.col_category').addClass('col_category_ac');
+                }
+                else {
+                    $('.col_category').removeClass('col_category_ac');
+                }
+            })
+        }
+        else {
+            $('.opt_arrow').removeClass('scr_arrow_ac');
+
+            $('.col_content').css({display: 'none'});
+        }
+    };
+    
+    col_cate_resize()
+
+    $(window).resize(function(){
+        col_cate_resize()
+    })
 
 
     

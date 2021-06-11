@@ -17,18 +17,20 @@ $(document).ready(function(){
             list +=                     '<span>22</span>';
             list +=                 '</div>';
             list +=                 '<div class="main_brand_logo s_sp_active">';
-            list +=                     '<a href=""><img src="img/main/'+(i+1)+'_'+BRAND_NAME[i]+'/logo_'+MAIN_SLIDE_LIST[i].logo_src+'" alt="logo"></a>';
+            list +=                     '<a href="collection.html"><img src="img/main/'+(i+1)+'_'+BRAND_NAME[i]+'/logo_'+MAIN_SLIDE_LIST[i].logo_src+'" alt="logo"></a>';
             list +=                 '</div>';
             list +=                 '<div class="main_brand_info s_sp_active">'+MAIN_SLIDE_LIST[i].info+'</div>';
             list +=                 '<div class="main_more m_sp_active">';
-            list +=                     '<a href="">EXPLORE MORE';
+            list +=                     '<a href="item.html?cate_no=0&item_no=11">EXPLORE MORE';
             list +=                         '<div class="main_more_line"></div>';
             list +=                         '<div class="main_more_circle"></div>';
             list +=                     '</a>';
             list +=                 '</div>';
             list +=             '</div>';
             list +=             '<div class="main_item_img m_sp_active">';
+            list +=             '<a href="item.html?cate_no=1&item_no=13">';
             list +=                 '<img src="img/main/'+(i+1)+'_'+BRAND_NAME[i]+'/item'+MAIN_SLIDE_LIST[i].item_src+'" alt="item">';
+            list +=             '</a>';
             list +=             '</div>';
             list +=         '</div>';
             list +=     '</div>';
@@ -152,7 +154,7 @@ $(document).ready(function(){
     let li_width = $('.indi_li').width();
     $('.indi_line').css({
         width: ul_width - li_width
-    })
+    });
 
     // 자동 슬라이드
     let main_auto_inter;
@@ -163,7 +165,7 @@ $(document).ready(function(){
             ms_index++;
             //인디 라인 색
             re_line2();
-        }, sl_timer + 2000);
+        }, sl_timer + 2200);
     };
     main_auto();
 
@@ -215,8 +217,6 @@ $(document).ready(function(){
 
         re_line2();
     });
-
-    
     
     //인디호버시
     $('.indi_li').hover(function(){
@@ -230,24 +230,6 @@ $(document).ready(function(){
         $(this).find('.indi_hov_img').fadeOut(0)
         
     });
-
-    /////////////////////////////////////////////////////
-    //햄버거 버튼 클릭시 자동슬라이드 멈추기
-    // $('.h_menu').click(function(){
-    //     clearInterval(main_auto_inter);
-    // });
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 });
